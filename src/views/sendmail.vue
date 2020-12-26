@@ -31,10 +31,7 @@
 </template>
 
 <script>
-import dotenv from 'dotenv';
 import emailjs from 'emailjs-com';
-
-dotenv.config();
 
 export default {
   name: "mail",
@@ -48,8 +45,8 @@ export default {
   methods: {
     sendEmail(e) {
       try {
-        emailjs.sendForm('service_5tdnpxh', 'template_6sp817h', e.target,
-        'user_bXMPvqZ7cFFIKhmyNZ7ct', {
+        emailjs.sendForm(process.env.VUE_APP_SERVICE_ID, process.env.VUE_APP_TEMPLATE_ID, e.target,
+        process.env.VUE_APP_USER_ID, {
           name: this.name,
           email: this.email,
           message: this.message
@@ -64,8 +61,8 @@ export default {
       this.message = ''
     },
   },
-  created(){
-    console.log(process.env.Service_ID);
+  mounted(){
+
   }
 };
 </script>
