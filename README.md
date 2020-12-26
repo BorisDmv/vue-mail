@@ -1,6 +1,10 @@
 # vue-mail
+### Mail system helping you send mails using client side technologies only. No server is required!
+
+![](./src/assets/mail-page.png)
 
 ## Project setup
+### Installing emailjs-com package
 ```
 npm install
 ```
@@ -14,11 +18,3 @@ npm run serve
 ```
 npm run build
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

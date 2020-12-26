@@ -1,7 +1,7 @@
 <template>
   <div class="mail">
     <div class="container">
-        <form>
+        <form v-on:submit.prevent="sendEmail">
           <label>Name</label>
           <input 
             type="text" 
@@ -51,6 +51,7 @@ export default {
           email: this.email,
           message: this.message
         })
+        console.log("message delivered");
 
       } catch(error) {
           console.log({error})
